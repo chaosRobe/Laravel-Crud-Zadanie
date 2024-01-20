@@ -19,14 +19,14 @@ Route::get('/', function () {
 
 Route::get('/person',[PersonController::class,'index'])->name('person.index');
 
-Route::get('/person/showData',[PersonController::class,'showData'])->name('person.showData');
-Route::get('/person/showData/{person_id}/',[PersonController::class,'showData_specific'])->name('person.showData_specific');
+Route::get('/panasz/310697/people',[PersonController::class,'showData'])->name('person.showData');
+Route::get('/panasz/310697/people/{person_id}/',[PersonController::class,'showData_specific'])->name('person.showData_specific');
 
-Route::get('/person/create',[PersonController::class,'create'])->name('person.create');
-Route::post('/person',[PersonController::class,'store'])->name('person.store');
+Route::get('/panasz/310697/create',[PersonController::class,'create'])->name('person.create');
+Route::post('/panasz/310697/',[PersonController::class,'store'])->name('person.store');
 
-Route::get('/person/showData/{person_id}/edit',[PersonController::class,'edit'])->name('person.edit');
-Route::put('/person/showData/{person_id}/update',[PersonController::class,'update'])->name('person.update');
+Route::get('/panasz/310697/people/{person_id}/edit',[PersonController::class,'edit'])->name('person.edit');
+Route::put('/panasz/310697/people/{person_id}/update',[PersonController::class,'update'])->name('person.update');
 
-Route::get('/person/showData/{person_id}/delete',[PersonController::class,'delete'])->name('person.delete');
-Route::delete('/person/showData/{person_id}/delete_conf',[PersonController::class,'delete_conf'])->name('person.delete_conf');
+Route::get('/panasz/310697/people/{person_id}/delete',[PersonController::class,'delete'])->name('person.delete');
+Route::delete('/panasz/310697/people/{person_id}/delete_conf',[PersonController::class,'delete_conf'])->name('person.delete_conf');
