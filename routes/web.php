@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/person',[PersonController::class,'index'])->name('person.index');
+/*Route::get('/person',[PersonController::class,'index'])->name('person.index');
 
 Route::get('/panasz/310697/people',[PersonController::class,'showData'])->name('person.showData');
 Route::get('/panasz/310697/people/{person_id}/',[PersonController::class,'showData_specific'])->name('person.showData_specific');
@@ -30,3 +30,4 @@ Route::put('/panasz/310697/people/{person_id}/update',[PersonController::class,'
 
 Route::get('/panasz/310697/people/{person_id}/delete',[PersonController::class,'delete'])->name('person.delete');
 Route::delete('/panasz/310697/people/{person_id}/delete_conf',[PersonController::class,'delete_conf'])->name('person.delete_conf');
+*/

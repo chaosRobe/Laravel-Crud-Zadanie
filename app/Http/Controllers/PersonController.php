@@ -57,4 +57,48 @@ class PersonController extends Controller
         $person_id->delete();
         return view('person.index');
     }
+
+
+
+
+
+
+
+    public function creating(Request $request){
+        $data=new Person();
+        $data->name = $request->name;
+        $data->surname = $request->surname;
+        $data->phone = $request->phone;
+        $data->address = $request->address;
+        $data->country = $request->country;
+        $data->save() ;
+        return response()->json($data);
+    }
+
+    public function editing(Request $request, Person $person_id){
+        $data=$person_id;
+        $data->name = $request->name;
+        $data->surname = $request->surname;
+        $data->phone = $request->phone;
+        $data->address = $request->address;
+        $data->country = $request->country;
+        $data->update() ;
+        return response()->json($data);
+    }
+
+    public function deleting( Request $request,Person $person_id){
+      
+        $data = Person::findorfail($person_id->id)->delete() ;
+        return response()->json($data);
+    }
+    public function getting(){
+      
+        $data = Person::all();
+        return response()->json($data);
+    }
+    public function getting_one(Person $person_id){
+      
+        $data = $person_id;
+        return response()->json($data);
+    }
 }
